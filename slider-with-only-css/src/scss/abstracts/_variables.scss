@@ -1,0 +1,48 @@
+$sizes: (
+  'em-0': 2.2em,
+  'em-1': 1.8em,
+  'em-2': 1.6em,
+  'em-3': 1.4em,
+  'em-4': 1.2em,
+  'em-5': 1em,
+  'em-6': .8em,
+  'em-7': .6em,
+);
+@function get-size($name) {
+  @return map-get($sizes, $name);
+}
+
+$colors: (
+  'color-1': #6d5b97,
+  'color-2': #844981,
+  'color-3': #a9729c,
+  'color-4': #868fc6,
+  'color-5': #a28aaa,
+  'color-6': #a96483,
+  'color-7': #d57897,
+  'color-8': #f0a5c6,
+  'color-9': #1b1b1d,
+  'color-10': #fff,
+  'color-11': rgba(27, 27, 29, .3),
+);
+@function get-color($name) {
+  @return map-get($colors, $name);
+}
+
+$breakpoints: (
+  'max-extra-small': (max-width: 479px),
+  'max-small': (max-width: 576px),
+  'max-medium': (max-width: 767px),
+  'max-extra-medium': (max-width: 991px),
+  'max-large': (max-width: 1050px),
+  'max-extra-large': (max-width: 1199px),
+
+  'min-extra-small': (min-width: 480px),
+  'min-small': (min-width: 577px),
+  'min-medium': (min-width: 768px),
+  'min-large': (min-width: 992px),
+  'min-extra-large': (min-width: 1200px),
+);
+@function get-breakpoint($name) {
+  @return map-get($breakpoints, $name);
+}

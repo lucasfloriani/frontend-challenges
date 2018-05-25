@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="dist/css/home.css">
+  <title>Slider with only CSS</title>
+</head>
+<body>
+  <div class="container">
+    <section class="slide-container">
+      <ul class="slide-list">
+        <li class="slide-item">
+          <img src="dist/img/slide-image.jpg" alt="Imagem de teste" class="slide-image">
+          <label for="slide-2" class="slide-label slide-label-right"></label>
+        </li>
+        <li class="slide-item">
+          <label for="slide-1" class="slide-label slide-label-left"></label>
+          <img src="dist/img/slide-image.jpg" alt="Imagem de teste" class="slide-image">
+          <label for="slide-3" class="slide-label slide-label-right"></label>
+        </li>
+        <li class="slide-item">
+          <label for="slide-2" class="slide-label slide-label-left"></label>
+          <img src="dist/img/slide-image.jpg" alt="Imagem de teste" class="slide-image">
+          <label for="slide-4" class="slide-label slide-label-right"></label>
+        </li>
+        <li class="slide-item">
+          <label for="slide-3" class="slide-label slide-label-left"></label>
+          <img src="dist/img/slide-image.jpg" alt="Imagem de teste" class="slide-image">
+        </li>
+      </ul>
+      <div class="dots">
+        <input type="radio" name="slide" id="slide-1" class="dot">
+        <input type="radio" name="slide" id="slide-2" class="dot">
+        <input type="radio" name="slide" id="slide-3" class="dot">
+        <input type="radio" name="slide" id="slide-4" class="dot">
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+@charset 'UTF-8';
+
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/reset';
+@import './base/transitions';
+@import './base/typography';
+
+@import './components/slider';
+
+@import './pages/home';

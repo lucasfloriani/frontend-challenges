@@ -8,6 +8,7 @@
     display: flex;
     list-style: none;
     overflow-x: hidden;
+    transition: 0.3s transform ease-in-out;
     width: 100%;
   }
 
@@ -65,17 +66,28 @@
 }
 
 .dot {
+  bottom: 30px;
   cursor: pointer;
   height: 2rem;
+  left: 50%;
   margin: 0 8px;
+  position: absolute;
   width: 2rem;
+  z-index: 100;
 
-  &s {
-    align-items: center;
-    bottom: 30px;
-    display: flex;
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
+  $qtyDots: 4;
+  $dotTranslate: ($qtyDots / 2) * -100%;
+  $slideTranslate: 0%;
+  @for $i from 1 through $qtyDots {
+    &-#{$i} {
+      transform: translateX($dotTranslate);
+
+      &:checked ~ .slide-list {
+        transform: translateX($slideTranslate);
+      }
+      $slideTranslate: $slideTranslate - 100%;
+      $dotTranslate: $dotTranslate + 100%;
+    }
   }
+
 }

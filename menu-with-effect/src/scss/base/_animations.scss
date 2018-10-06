@@ -1,0 +1,14 @@
+@keyframes slide-item {
+  0% {
+    opacity: 0;
+    transform: scaleY(0) translateX(-50%);
+  }
+  40% {
+    transform: scaleY(1) translateX(-50%);
+  }
+  100% {
+    max-height: 50px;
+    opacity: 1;
+    transform: scaleY(1) translateX(0);
+  }
+}

@@ -1,0 +1,13 @@
+body {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  margin: 3rem;
+  min-height: 100vh;
+}
+
+.container {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 1200px;
+}

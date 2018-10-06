@@ -1,0 +1,49 @@
+.menu {
+	border-radius: 1.2rem;
+	box-shadow: -0.8rem 1rem 0 -0.4rem #a3abb6;
+	background-color: #f4f5f9;
+	padding: 8px;
+	width: 200px;
+	overflow: hidden;
+
+	.menu__title {
+		font-size: $size-1;
+		padding: 10px 0;
+		transform-origin: left top;
+		transition: 0.3s transform $material-transition;
+	}
+
+	.menu__list {
+		.menu__list__item {
+			align-items: center;
+      display: flex;
+			font-size: 1rem;
+			overflow: hidden;
+			opacity: 0;
+			max-height: 0;
+			transform-origin: top;
+			transform: scaleY(0) translateX(-50%);
+
+			.menu__list__item__before {
+				padding-right: 5px;
+			}
+		}
+	}
+
+	&:hover {
+    .menu__list__item {
+			animation: slide-item;
+			animation-fill-mode: both;
+			animation-duration: 0.8s;
+			animation-timing-function: $material-transition;
+
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+
+    .menu__title {
+      transform: scale(1.2);
+    }
+	}
+}
